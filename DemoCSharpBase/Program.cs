@@ -108,7 +108,15 @@ namespace DemoCSharpBase
 
             Console.WriteLine(reponse);
 
+            /*
+                Mettre en place un système de vente basique
+                Demander à l'utilisateur combien d'article il souhaite
+                
+                tout les 2 articles, le 3eme lui est offert
 
+                Annoncer à l'utilisateur combien il doit en payer et combien sont gratuits
+                (pas de calcul de prix ou de choix d'article... pour le moment...)
+             */
 
         }
     }

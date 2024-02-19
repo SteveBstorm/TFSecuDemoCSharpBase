@@ -181,9 +181,61 @@ namespace DemoBoucle
             //{
             //    i = 5;
             //    Console.WriteLine(i);
-            
+            string[,] position = new string[10, 10];
+            int posX, posY;
+
+            int posXCurrent = 5;
+            int posYCurrent = 5;
+
+            while (true)
+            {
+                for (int x = 0; x < 10; x++)
+                {
+                    for (int y = 0; y < 10; y++)
+                    {
+                        Console.Write("|");
+                        position[x, y] = "_";
+                        if (x == posXCurrent && y == posYCurrent)
+                        {
+                            position[x, y] = "P";
+                        }
+                        Console.Write(position[x, y]);
+                        Console.Write("");
+                    }
+                    Console.WriteLine();
+                }
+
+                Console.WriteLine("Direction ? Z Q S D");
+                ConsoleKeyInfo info = Console.ReadKey();
+
+                switch (info.Key)
+                {
+                    case ConsoleKey.Z:
+                        if (posYCurrent > 0)
+
+                            posYCurrent -= 1;
+                        break;
+
+                    case ConsoleKey.Q:
+                        if(posXCurrent > 0)
+                        posXCurrent -= 1;
+                        break;
+                    case ConsoleKey.S:
+                        if(posYCurrent < 9)
+                            posYCurrent += 1;
+                        break;
+                    case ConsoleKey.D:
+                        if(posXCurrent < 9)
+                            posXCurrent += 1;
+                        break;
+
+                }
+                Console.Clear();
+            }
 
             
+
+
         }
     }
 }

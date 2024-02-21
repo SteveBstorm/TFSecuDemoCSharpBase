@@ -344,6 +344,38 @@ namespace DemoBoucle
             #endregion
 
 
+            #region Exercice Collections
+            /*
+                Créer la liste des films star wars avec le casting de chaque film
+             */
+
+            //Dictionary<string, List<string>> Films = new Dictionary<string, List<string>>();
+
+            //Films.Add("Phantom Menace", 
+            //          new List<string> { "Ewan McGregor", "Liam Nesson", "Jake Lloyd" });
+
+            //Films.Add("Attack of the clones",
+            //          new List<string> { "Ewan McGregor", "Hayden Chrismachin", "Natalie Portman" });
+
+            //Films.Add("Empire strikes back",
+            //          new List<string> { "Mark Hamill", "David Prowse", "Carrie Fisher" });
+
+
+            //foreach(KeyValuePair<string, List<string>> film in Films)
+            //{
+            //    Console.WriteLine(film.Key);
+            //    Console.WriteLine("------------------");
+            //    foreach(string acteur in film.Value)
+            //    {
+            //        Console.WriteLine(acteur);
+            //    }
+            //    Console.WriteLine();
+            //} 
+
+            #endregion
+
+
+
         }
 
     }

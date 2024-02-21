@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using System.Collections;
+using System.Xml;
 
 namespace DemoBoucle
 {
@@ -151,7 +152,10 @@ namespace DemoBoucle
 
 
             int[] tableau = new int[5];
-
+            // foreach(int i in tableau)
+            //{
+            //    Console.WriteLine(i);
+            //}
             tableau[0] = 2;
             tableau[1] = 3;
             tableau[3] = 4;
@@ -181,61 +185,167 @@ namespace DemoBoucle
             //{
             //    i = 5;
             //    Console.WriteLine(i);
-            string[,] position = new string[10, 10];
-            int posX, posY;
+            #region Déplacer un curseur
+            //string[,] position = new string[10, 10];
+            //int posX, posY;
 
-            int posXCurrent = 5;
-            int posYCurrent = 5;
+            //int posXCurrent = 5;
+            //int posYCurrent = 5;
 
-            while (true)
-            {
-                for (int x = 0; x < 10; x++)
-                {
-                    for (int y = 0; y < 10; y++)
-                    {
-                        Console.Write("|");
-                        position[x, y] = "_";
-                        if (x == posXCurrent && y == posYCurrent)
-                        {
-                            position[x, y] = "P";
-                        }
-                        Console.Write(position[x, y]);
-                        Console.Write("");
-                    }
-                    Console.WriteLine();
-                }
+            //while (true)
+            //{
+            //    for (int x = 0; x < 10; x++)
+            //    {
+            //        for (int y = 0; y < 10; y++)
+            //        {
+            //            Console.Write("|");
+            //            position[x, y] = "_";
+            //            if (x == posXCurrent && y == posYCurrent)
+            //            {
+            //                position[x, y] = "P";
+            //            }
+            //            Console.Write(position[x, y]);
+            //            Console.Write("");
+            //        }
+            //        Console.WriteLine();
+            //    }
 
-                Console.WriteLine("Direction ? Z Q S D");
-                ConsoleKeyInfo info = Console.ReadKey();
+            //    Console.WriteLine("Direction ? Z Q S D");
+            //    ConsoleKeyInfo info = Console.ReadKey();
 
-                switch (info.Key)
-                {
-                    case ConsoleKey.Z:
-                        if (posYCurrent > 0)
+            //    switch (info.Key)
+            //    {
+            //        case ConsoleKey.Z:
+            //            if (posYCurrent > 0)
 
-                            posYCurrent -= 1;
-                        break;
+            //                posYCurrent -= 1;
+            //            break;
 
-                    case ConsoleKey.Q:
-                        if(posXCurrent > 0)
-                        posXCurrent -= 1;
-                        break;
-                    case ConsoleKey.S:
-                        if(posYCurrent < 9)
-                            posYCurrent += 1;
-                        break;
-                    case ConsoleKey.D:
-                        if(posXCurrent < 9)
-                            posXCurrent += 1;
-                        break;
+            //        case ConsoleKey.Q:
+            //            if(posXCurrent > 0)
+            //            posXCurrent -= 1;
+            //            break;
+            //        case ConsoleKey.S:
+            //            if(posYCurrent < 9)
+            //                posYCurrent += 1;
+            //            break;
+            //        case ConsoleKey.D:
+            //            if(posXCurrent < 9)
+            //                posXCurrent += 1;
+            //            break;
 
-                }
-                Console.Clear();
-            }
+            //    }
+            //    Console.Clear(); 
+            #endregion
 
-            
+            #region Exemple ArrayList
+            //ArrayList arrayList = new ArrayList();
+
+            //arrayList.Add(tableau);
+            //arrayList.Add("steve");
+            //arrayList.Add(new DateTime());
+
+            //Console.WriteLine(arrayList[1]);
+
+            //foreach (var x in arrayList)
+            //{
+            //    switch (x)
+            //    {
+            //        case int[] t:
+            //            break;
+            //        case string s:
+            //            Console.WriteLine(s);
+            //            break;
+            //        case DateTime dt:
+            //            Console.WriteLine(dt);
+            //            break;
+            //    }
+            //    Console.WriteLine(x.ToString());
+            //} 
+            #endregion
+
+            #region Exemple List
+            //List<int> list = new List<int>();
+            //foreach (int i in list)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+
+            //list.Add(5);
+            //list.AddRange(tableau);
+
+
+            //Console.WriteLine(list[3]);
+
+            ////list.RemoveAll(albert => albert == 5);
+
+            //Console.WriteLine(list.Count());
+
+            //Console.WriteLine();
+
+
+
+            //foreach (int i in list.OrderByDescending(element => element))
+            //{
+            //    Console.WriteLine(i);
+            //} 
+            #endregion
+
+
+            #region DemoCollection
+            //Dictionary<string, DateTime> dateNaissance = new Dictionary<string, DateTime>();
+
+            //dateNaissance.Add("Toto", DateTime.Now);
+            //dateNaissance.Add("Arthur", new DateTime(1212, 12, 12));
+            //dateNaissance.Add("Merlin", new DateTime(1111, 11, 11));
+
+            //Console.WriteLine(dateNaissance["Toto"]);
+
+            //dateNaissance["Toto"] = new DateTime(1983, 06, 28);
+
+            //foreach (KeyValuePair<string, DateTime> dt in dateNaissance)
+            //{
+            //    Console.WriteLine(dt.Key);
+            //    Console.WriteLine(dt.Value);
+            //}
+
+
+            //Dictionary<int, string> truc = new Dictionary<int, string>();
+
+            //truc.Add(69, "Année érotique");
+            //truc.Add(1234, "Année érotique");
+            //truc.Add(truc.Count(), "Année érotique");
+            //truc.Add(truc.Count(), "Année érotique");
+            //truc.Add(truc.Count(), "Année érotique");
+            //truc.Add(truc.Count(), "Année érotique");
+
+            ////Queue<string> queue = new Queue<string>();
+            ////queue.Enqueue("Steve");
+            ////queue.Enqueue("Kevinou");
+            ////queue.Enqueue("Alba");
+
+            ////string client = queue.Dequeue();
+            ////Console.WriteLine(client);
+            ////client = queue.Peek();
+            ////Console.WriteLine(client);
+
+            //Stack<string> s = new Stack<string>();
+
+            //s.Push("Kevinou");
+            //s.Push("Alba");
+            //s.Push("Elean");
+
+            //string user = s.Pop();
+            //Console.WriteLine(user);
+            //Console.WriteLine(s.Peek());
+            //s.Pop();
+            //Console.WriteLine(s.Peek()); 
+            #endregion
 
 
         }
+
     }
 }
+
